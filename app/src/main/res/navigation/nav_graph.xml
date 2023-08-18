@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/first_fragment"
+    android:id="@+id/nav_graph">
+
+    <keep_state_fragment
+        android:id="@+id/first_fragment"
+        android:name="com.nayeon.daechungapp2.FirstFragment"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_first"
+        android:label="FirstFragment" >
+
+
+        <action
+            android:id="@+id/action_first_fragment_to_media_detail"
+            app:destination="@id/media_detail_fragment" />
+
+
+
+    </keep_state_fragment>
+
+    <keep_state_fragment
+        android:id="@+id/second_fragment"
+        android:name="com.nayeon.daechungapp2.SecondFragment"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_second"
+        android:label="SecondFragment" />
+
+    <keep_state_fragment
+        android:id="@+id/third_fragment"
+        android:name="com.nayeon.daechungapp2.ThirdFragment"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_third"
+        android:label="ThirdFragment" />
+
+    <keep_state_fragment
+        android:id="@+id/media_detail_fragment"
+        android:name="com.nayeon.daechungapp2.MediaDetailFragment"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/media_detail"
+        android:label="MediaDetailFragment">
+
+
+
+        <action
+            android:id="@+id/action_mediadetail_to_media_job"
+            app:destination="@id/media_detail_job_fragment" />
+
+    </keep_state_fragment>
+
+
+    <keep_state_fragment
+        android:id="@+id/media_detail_job_fragment"
+        android:name="com.nayeon.daechungapp2.MediaJobFragment"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/media_detail_job"
+        android:label="MediaDetailjobFragment" />
+
+
+</navigation>
